@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity  } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView  } from 'react-native';
+import Transaction from './transaction';
 
 const Buttons = () => {
     return (
@@ -44,6 +45,11 @@ const Buttons = () => {
                     <Text style={styles.text}>Topup</Text>
                 </View>
             </View>
+
+            <ScrollView>
+            <Transaction/>
+            </ScrollView>
+
         </View>
         
     );
@@ -51,7 +57,7 @@ const Buttons = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1.9,
+        // flex: 1.9,
         // flexDirection: 'row',
         // marginTop: -190,
         // padding: 25, 

@@ -1,21 +1,30 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Platform } from 'react-native';
+import { View, Text, StyleSheet, Image, Platform, TouchableOpacity } from 'react-native';
 
 const Welcome = ({ name }) => {
   return (
     <View style={styles.container}>
+      
       <View style={{flexDirection:"row"}}>
-      <View>  
-      <Image source={require('../assets/profile.png')} style={styles.profileImage} />
+        
+        <View>
+          <TouchableOpacity>  
+          <Image source={require('../assets/profile.png')} style={styles.profileImage} />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>Welcome back,</Text>
+          <Text style={styles.name}>{name}</Text>
+        </View>
+
       </View>
-      <View style={styles.textContainer}>
-      <Text style={styles.text}>Welcome back,</Text>
-      <Text style={styles.name}>{name}</Text>
-      </View>
-      </View>
-      <View style={styles.searchContainer}>
-      <Image source={require('../assets/search.png')} style={styles.searchImage} />
-      </View>
+
+        <View style={styles.searchContainer}>
+          <TouchableOpacity>
+          <Image source={require('../assets/search.png')} style={styles.searchImage} />
+          </TouchableOpacity>
+        </View>
     </View>
   );
 };
